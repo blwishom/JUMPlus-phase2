@@ -91,7 +91,7 @@
 -- );
 
 
--- ***************************************INSERTS***************************************
+-- *************************************** INSERTS ***************************************
 -- insert into address values(1, '123 Wallace Ln', 'Polk', 'California', '54321');
 -- insert into address values(2, '45 Renassaince Way', 'Bank', 'California', '12345');
 -- insert into coach values(1, 'Willie', 'Beamin', 3334445555, 'willieb@gmail.com');
@@ -105,3 +105,7 @@
 -- insert into season_team values(1, 1, 1, 1);
 -- insert into team values(1, 'East Bay Jaguars');
 -- insert into team values(2, 'East Bay 49ers');
+
+-- *************************************** UPDATE ***************************************
+-- update player set first_name = 'Mark' where id = 2;
+-- update address set street = '123 New Address' where id = 1;
