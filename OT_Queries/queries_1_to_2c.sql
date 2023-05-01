@@ -29,7 +29,7 @@ FROM locations;
 -- # Query 2a
 SELECT product_name as Product_Name, list_price as List_Price--
 FROM products
-WHERE list_price between 100 and 150;
+WHERE list_price between 100 and 500;
 
 -- # Query 2b
 SELECT products.product_name as Product_Name, products.list_price as List_Price, product_categories.category_name as Category_Name
