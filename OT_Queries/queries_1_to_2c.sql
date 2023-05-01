@@ -4,7 +4,8 @@ use ot;
 SELECT region_id as Region_ID, count(*) as Count
 FROM countries
 GROUP BY region_id
-ORDER BY Count desc;
+ORDER BY Count desc
+LIMIT 1;
 
 -- # Query 1b
 SELECT region_name as Region_With_Most_Locations
@@ -64,5 +65,3 @@ FROM products
 GROUP BY list_price
 ORDER BY list_price desc
 LIMIT 2;
-
-
