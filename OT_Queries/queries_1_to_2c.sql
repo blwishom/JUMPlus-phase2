@@ -22,7 +22,7 @@ FROM locations
 WHERE state IS null;
 
 -- # Query 1e
-SELECT DISTINCT count(country_id) as Countries_With_Loctions
+SELECT count(DISTINCT country_id) as Countries_With_Loctions
 FROM locations;
 
 -- # Query 2a
@@ -34,15 +34,35 @@ WHERE list_price between 100 and 150;
 SELECT products.product_name as Product_Name, products.list_price as List_Price, product_categories.category_name as Category_Name
 FROM products
 JOIN product_categories
-	ON products.product_id = product_categories.category_id;
+	ON products.category_id = product_categories.category_id;
 
 -- # Query 2c
-SELECT products.product_name, products.list_price, quantity, category_name
+SELECT products.product_name, products.list_price
 FROM products
 JOIN inventories
 	ON products.product_id = inventories.product_id
 JOIN product_categories
-	ON inventories.warehouse_id = product_categories.category_id
+	ON product_categories.category_id = products.category_id
 JOIN warehouses
-	ON warehouses.warehouse_id = warehouses.warehouse_id
+	ON warehouses.warehouse_id = inventories.warehouse_id
 WHERE quantity > 100 and warehouse_name = 'Toronto' and category_name = 'CPU';
+
+-- # Query 3a
+SELECT avg(list_price) as Avg_List_Price
+FROM products;
+
+-- # Query 3b
+SELECT product_categories.category_name as Category_Name, round(avg(list_price), 2) as Avg_List_Price
+FROM products
+JOIN product_categories
+	ON products.category_id = product_categories.category_id
+GROUP BY Category_Name;
+
+-- Query 4a
+SELECT list_price as List_Price, count(list_price) as Count_of_List_Price
+FROM products
+GROUP BY list_price
+ORDER BY list_price desc
+LIMIT 2;
+
+
