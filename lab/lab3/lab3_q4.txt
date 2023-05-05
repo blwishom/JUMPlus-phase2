@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Enter a word:"
+read WORD
+
+for file in $(ls -A); do
+	COUNT=$(cat $file | grep $WORD | wc -l)
+	if [ $COUNT -gt 0 ]; then
+		echo $file
+	fi
+done
