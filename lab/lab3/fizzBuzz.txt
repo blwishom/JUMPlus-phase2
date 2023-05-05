@@ -1,13 +1,14 @@
 #!/bin/bash
 
 function fizzBuzz {
-	read ${num}
+	echo "Enter a number:"
+	read NUM
 
-	if [ $(($num % 3 -eq 0)) ] ; then
+	if (( $NUM % 3==0 )); then
 		echo Fizz
-	elif [ $(($num % 5 -eq 0)) ] ; then
+	elif (( $NUM % 5==0 )); then
 		echo Buzz
-	elif [ $(($num % 3 -eq 0 && $num % 5 -eq 0)) ] ; then
+	elif (( $NUM % 3==0 && $NUM % 5==0 )); then
 		echo FizzBuzz
 	fi
 }
