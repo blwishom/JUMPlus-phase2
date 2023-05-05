@@ -1,0 +1,15 @@
+#!/bin/bash
+
+function fizzBuzz {
+	read ${num}
+
+	if [ $(($num % 3 -eq 0)) ] ; then
+		echo Fizz
+	elif [ $(($num % 5 -eq 0)) ] ; then
+		echo Buzz
+	elif [ $(($num % 3 -eq 0 && $num % 5 -eq 0)) ] ; then
+		echo FizzBuzz
+	fi
+}
+
+fizzBuzz
