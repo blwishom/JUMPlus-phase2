@@ -1,14 +1,15 @@
 #!/bin/bash
 
-num=20
+num=21
 
-until [ $num -lt 11 ]; do
-	echo $num is greater than 10
+until [ $num -eq 0 ]; do
 	let num=$num-1
-
-	if [ $num -eq 10 ]; then
+	
+	if [ $num -gt 10 ]; then
+		echo $num is greater than 10
+	elif [ $num -eq 10 ]; then
         	echo $num equals $num!
 	elif [ $num -lt 10 ]; then
-        	echo $num is less than 10!
+        	echo $num is less than 10
 	fi
 done
