@@ -20,3 +20,7 @@ echo WORDS after append: ${WORDS[@]}
 for w in ${WORDS[@]}; do
     echo $w
 done | sort
+
+# for w in ${WORDS[@]}; do
+#     echo $w
+# done | sort | grep and
