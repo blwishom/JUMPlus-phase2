@@ -1,0 +1,11 @@
+BLW-file.txt
+another
+blue.txt
+colorCopy.txt
+colorDir
+colorNames.txt
+d3
+dirA
+dirContents.txt
+echoFile.txt
+red.txt
