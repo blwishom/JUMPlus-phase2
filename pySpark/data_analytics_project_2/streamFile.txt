@@ -1,0 +1,5 @@
+Today is Tue May 2 11:28:59 PDT 2023
+a few seconds later it is Tue May 2 11:29:38 PDT 2023
+now it is Tue May 2 11:31:15 PDT 2023
+blue and green
+Second time appending blue and green
