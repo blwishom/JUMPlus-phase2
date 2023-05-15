@@ -1,1 +1,0 @@
-export FULLNAME="Blair Wishom"
