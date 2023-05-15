@@ -1,5 +1,0 @@
-Hello bash
-I am writing a text file
-I will process it with a bash script
-Bash can be used to write scripts
-I used the bash to write the bash
