@@ -1,3 +1,0 @@
-#!/bin/bash
-
-read "-w $($vi newFile.txt)"
