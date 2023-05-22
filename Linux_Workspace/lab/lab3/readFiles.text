@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#echo "Enter a file, then a word to search within that file"
+#read FILE WORD
+
+#if [ -r $FILE ]; then
+#	cat $FILE | grep -i $WORD
+#else
+#	echo "File is not in read mode"
+#fi
+
+if [ -r $1 ]; then
+        cat $1 | grep -i "$2"
+else
+        echo "File is not in read mode"
+fi
