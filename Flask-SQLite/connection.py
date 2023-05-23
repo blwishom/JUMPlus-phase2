@@ -12,9 +12,8 @@ def create_connection(db_file):
         conn = sqlite3.connect(db_file)
     except Exception as e:
         print(e)
-    finally:
-        if conn:
-            conn.close()
+
+    return conn
 
 def get_connection(db_file):
     ''' Close the connection after using it '''
