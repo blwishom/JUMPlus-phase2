@@ -23,5 +23,22 @@ def login():
         else:
             return "Incorrect Username or Password"
 
+@app.route("/date/today")
+def send_date():
+    today = datetime.now()
+    data = {
+        "day": today.day,
+        "month": today.month,
+        "year": today.year
+    }
+    # return f"<h1>{today}</h1>"
+    return jsonify(data)
+
+@app.route("/book")
+def books():
+    books = db.all_books(conn.create_connection("bims.db"))
+
+    return jsonify(books)
+
 if __name__ == "__main__":
     app.run(debug=True)

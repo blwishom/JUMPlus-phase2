@@ -30,35 +30,6 @@ def get_connection(db_file):
 if __name__ == '__main__':
     create_connection('bims.db')
 
-# SQL TRANSACTIONS
-authors = ''' CREATE TABLE IF NOT EXIST Author (
-    id INT PRIMARY KEY,
-    name TEXT
-); '''
-
-categories = ''' CREATE TABLE IF NOT EXIST Category (
-    id INT PRIMARY KEY,
-    name TEXT
-); '''
-
-books = ''' CREATE TABLE IF NOT EXIST Book (
-    id INT PRIMARY KEY,
-    name TEXT,
-    published DATE,
-    FOREIGN KEY (author_id)
-        REFERENCES Author (id)
-    FOREIGN KEY (category_id)
-        REFERENCES Category (id)
-); '''
-
-create_connection(authors)
-create_connection(categories)
-create_connection(books)
-
-
-
-
-
 
 # MANUAL COMMIT AND CLOSE
 # conn.commit()
