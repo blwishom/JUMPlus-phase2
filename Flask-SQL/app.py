@@ -1,4 +1,7 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
+from datetime import datetime 
+import connection as conn
+import query_data as db
 
 app = Flask(__name__)
 
@@ -19,7 +22,7 @@ def login():
         print(request)
         print(request.json)
         if request.json["username"] == "Hello" and request.json["password"] == "World":
-            return "Thank you for loggin in"
+            return "Thank you for logging in"
         else:
             return "Incorrect Username or Password"
 

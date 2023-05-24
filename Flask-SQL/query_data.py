@@ -7,7 +7,11 @@ def all_books(conn):
     return cursor.fetchall()
 
 def select_book(conn, book_id):
-    pass
+    sql = "SELECT * FROM book WHERE id = ?"
+    cursor = conn.cursor()
+    cursor.execute(sql, [book_id])
+    return cursor.fetchone()
+
 
 def select_author(conn, value=None, column=None):
     cursor = conn.cursor()
@@ -20,7 +24,7 @@ def select_author(conn, value=None, column=None):
          sql = "SELECT id, name FROM author WHERE id = ?"
          cursor.execute(sql, [value])
 
-    else:
+    else: 
         sql = "SELECT id, name FROM author"
         cursor.execute(sql)
 
@@ -38,7 +42,7 @@ def select_category(conn, value=None, column=None):
         sql = "SELECT id, name FROM category WHERE id = ?"
         cursor.execute(sql, [value])
 
-    else:
+    else: 
         sql = "SELECT id, name FROM category"
         cursor.execute(sql)
 

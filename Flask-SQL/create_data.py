@@ -43,24 +43,24 @@ def main():
     conn = create_connection(database)
 
     if conn:
-
+      
         with conn:
-            insert_book(conn, {"name":"The Bee Book",
-                               "published":"2016-03-1",
+            insert_book(conn, {"name":"The Bee Book", 
+                               "published":"2016-03-1", 
                                "author":"Emma Tennant",
                                "category":"Science"})
-
+       
         with conn:
-            insert_book(conn, {"name":"The Cat in the Hat",
-                               "author":"Dr. Seuss",
+            insert_book(conn, {"name":"The Cat in the Hat", 
+                               "author":"Dr. Seuss", 
                                "published":"1957-03-12",
                                "category":"Kids"})
-
+        
         with conn:
-            insert_book(conn, {"name":"Green Eggs and Ham",
-                               "published":"1960-08-12",
+            insert_book(conn, {"name":"Green Eggs and Ham", 
+                               "published":"1960-08-12", 
                                "author":"Dr. Seuss",
                                "category":"Kids"})
-
+      
 if __name__ == "__main__":
     main()

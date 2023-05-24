@@ -5,7 +5,7 @@ from connection import create_connection
 def create_table(conn, create_table_sql):
     """
     Make a table with the specified statement.
-
+    
     Args:
         conn = Connection object
         create_table_sql = SQL statement about table creation
